@@ -1,0 +1,287 @@
+/* Main page layout. */
+body {
+    padding:0; 
+    margin:0; 
+    background-color:#cccccc; 
+    font-family: serif;
+}
+#mainpage {
+    width:960px; 
+    text-align:center; 
+    margin:0 auto;
+}
+
+/* Header image(s). */
+#picture {
+    margin:0 auto; 
+    width:960px; 
+    display:inline-block;
+}
+img.sixleft {
+    width:157px; 
+    display:inline; 
+    float:left; 
+    border-style:solid; 
+    border-width: 2px 0 2px 2px
+}
+img.sixright {
+    width:157px; 
+    display:inline; 
+    float:left; 
+    border-style:solid; 
+    border-width:2px;
+}
+
+/* Sidebar. */
+#sidebar {
+    width:150px; 
+    float:left; 
+    margin:20px 0 20px 0px; 
+    font-size:1.1em; 
+    line-height:1.3em;
+}
+#sidebar a {
+    color:#000000;
+}
+#sidebar ul.menu {
+    margin:0; 
+    padding:0;
+}
+#sidebar ul.menu li {
+    list-style:none; 
+    margin:0 0 5px 0; 
+    font-weight:600; 
+    background-color:#cfdbc5; 
+    padding:4px 10px 4px 10px; 
+    border-style:solid; 
+    text-align:left; 
+    border-width:2px; 
+    letter-spacing: 1px;
+}
+
+/* Name & institution information. */
+.myname {
+    width:350px; 
+    text-align:left; 
+    margin:30px 20px 20px 8px; 
+    float:left; 
+    letter-spacing:1px; 
+    font-size:1em; 
+    line-height:160%;
+}
+.myname h1 {
+    margin-bottom:5px;
+}
+.job {
+    width:500px; 
+    text-align:right; 
+    margin:30px 8px 20px 0; 
+    float:right; 
+    letter-spacing:0.5px;
+}
+.job a {
+    color:#000000;
+}
+.job h4.larger {
+    font-size:1.1em; 
+    margin:4px 0 0 0;
+}
+.job h5.larger {
+    font-size:0.85em; 
+    margin:4px 0 0 0;
+}
+
+/* Footer. */
+.footer {
+    width:500px; 
+    float:right; 
+    text-align:right; 
+    font-size:0.8em; 
+    font-weight:400; 
+    margin:0px 10px 10px 0;
+}
+
+/* Main content block. */
+#maintext {
+    float:right; 
+    width:750px; 
+    text-align:left; 
+    margin:20px 4px 10px 10px; 
+    padding:15px 20px 5px 20px; 
+    background-color:#ffffff; 
+    border-style:solid; 
+    border-width:2px;
+}
+#maintext img {
+    border-style:solid; 
+    border-width:1px; 
+    max-width:100%;
+}
+
+#maintext img.noline {
+    border-style:none;
+    max-width:100%;
+    width:100%;
+}
+.indent-text {
+    width:715px; 
+    float:right;
+}
+/* For centering things */
+.center-out{
+    display:inline-block;
+}
+.center-in-100{
+    margin:0 auto;
+    width:100%;
+}
+.center-in-90{
+    margin:0 auto;
+    width:90%;
+}
+.center-in-80{
+    margin:0 auto;
+    width:80%;
+}
+.center-in-60{
+    margin:0 auto;
+    width:70%;
+}
+
+/* Image styles. */
+.figure{
+    margin:0;
+    padding:0;
+}
+.image-left-36 {
+    float:left; 
+    margin: 5px 20px 5px 0; 
+    width:36%; 
+    height:auto;
+}
+.image-left-45 {
+    float:left; 
+    margin: 5px 20px 5px 0; 
+    width:45%; 
+    height:auto;
+}
+.image-right-36 {
+    float:right; 
+    margin: 5px 0 5px 20px; 
+    width:36%; 
+    height:auto;
+}
+.image-right-45 {
+    float:right; 
+    margin: 5px 0 5px 20px; 
+    width:45%; 
+    height:auto;
+}
+.image-full {
+    clear:both; 
+    display:block; 
+    margin-left:auto; 
+    margin-right:auto; 
+    margin-top:20px; 
+    margin-bottom:20px;
+    width:95%;
+    height:auto;  
+    padding:0;
+    vertical-align:middle;
+}
+/* General styles for text. */
+a {
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+p a {
+    color:#0000ff;
+    }
+ul a {
+    color:#0000ff;
+    }
+p,h1,h2,h3,h4,h5,h6 {
+    margin:0 0 10px 0; 
+    padding:0; 
+    line-height:1.2em;
+}
+p.tab {
+    text-indent:2em;
+}
+p.caption {
+    font-style:italic; 
+    margin:6px 6px 0 6px; 
+    text-align:left; 
+    font-size:0.9em; 
+}
+p.caption-center {
+    font-style:italic; 
+    margin:6px 6px 0 6px; 
+    text-align:center; 
+    font-size:0.9em; 
+}
+h3.header {
+    letter-spacing:1px; 
+    font-variant:small-caps; 
+    font-size:1.5em;
+}
+h4.header {
+    letter-spacing:0px; 
+    font-variant:small-caps; 
+    font-size:1.2em;
+}
+ul {
+    line-height:1.3em;
+}
+ul.spaced li{
+    margin: 10px 0;
+}
+ul.inset {
+    list-style:none;
+}
+ul.inset li:before{
+    content:"-- ";
+    margin-left:-20px;
+}
+sub,sup {
+    vertical-align: 0; 
+    position: relative;
+}
+sup {
+    bottom: 0.8ex;
+}
+sub {
+    top: 0.8ex;
+}
+br.clear {
+    clear:both;
+}
+.code {
+    font-family:monospace;
+}
+.boldcode {
+    font-family:monospace;
+    font-weight:bold;
+}    
+
+/* Reference list styles. */
+.reftitle {
+    margin: 20px 0 5px 0;
+}
+.reftitle a{
+    color:#0000ff
+}
+.reference {
+    margin:0
+}
+
+/* Address style. */
+.contact {
+    margin:0 0 15px 30px; 
+    padding:3px 0 0 0; 
+    line-height:1.3em; 
+    font-size:0.95em; 
+    font-weight:700
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../styles/default.css" title="Kiminki default" />
+  <title>Apall Notes | Megan Kiminki</title>
+  <meta name="description" content="Notes on aperture extraction with 'apall' in IRAF."/>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+</head>
+
+<body>
+
+  <div id="mainpage">
+
+    <div class="myname">
+      <h1> Megan M. Kiminki </h1>
+      <h4> (formerly Megan M. Bagley) </h4>
+    </div>
+
+    
+    <div id="picture">
+      <img class="sixleft" src="../images/MMK-cholla.jpg" alt="A picture of teddy-bear cholla." />
+      <img class="sixleft" src="../images/MMK-cactus-flower.jpg" alt="Cactus in bloom in northwest Tucson." /> 
+      <img class="sixleft" src="../images/HST-ACS-HH666.jpg" alt="Hubble Space Telescope image of the HH 666 protostellar jet."/>
+      <img class="sixleft" src="../images/MMK-observing-2013.jpg" alt="Observing at the Magellan Telescopes."/>
+      <img class="sixleft" src="../images/MMK-Magellan.jpg" alt="The Magellan telescopes in Chile."/>
+      <img class="sixright" src="../images/MMK-saguaro.jpg" alt="Saguaro in Sabino Canyon."/>
+
+    </div>
+
+
+    <div id="sidebar">
+      <ul class="menu">
+	<li> <a href="../index.html">Home</a></li>
+	<li> <a href="../research.html">Research</a> </li>
+	<li> <a href="../code/index.html">Code</a> </li>
+	<li> <a href="../publications.html">Publications</a></li>
+	<li> <a href="../notes/index.html">Notes & Tips</a> </li>
+	<li> <a href="../contact.html">Contact Me</a></li>
+      </ul class="menu">
+    </div>
+
+    <div id="maintext">
+      
+      <h3 class="header">Aperture Extraction in IRAF: Apall</h3>
+      <hr>
+	
+	<p>Here's a quick reference on using
+	IRAF's <span class="boldcode">apall</a> task.  These notes
+	assume that you have some familiarity with IRAF and the
+	process of reducing spectra.</p>
+	
+      <p><span class="code">Apall</span> has many parameters.  For
+      maximum interactivity the first time through, set all the yes/no
+      questions on the first page to yes.  Other parameters you may
+      want to set, either before running or during an interactive run,
+      are:</p>
+      
+	<ul class="spaced">
+	  <li><span class="boldcode">line</span>&mdash;Defaults to the
+	  center of the image.  If you're looking at something like an
+	  emission-line galaxy that has a very weak continuum, you may
+	  want to center this on a bright emission line instead.
+	  </li>
+	  <li><span class="boldcode">nsum</span>&mdash;Again, with a faint
+	  source, you may need to increase this to sum over more
+	    lines.
+	  </li>
+	  <li><span class="boldcode">lower</span>
+	  and <span class="boldcode"> upper</span>&mdash;Adjust
+	    according to the width of your aperture.
+	  </li>
+	  <li><span class="boldcode">nfind</span>&mdash;If you expect
+	  to find more than one aperture (e.g., you're doing echelle
+	    spectroscopy) set this to the number of expected apertures.
+	  </li>
+	  <li><span class="boldcode">backgro</span>&mdash;This must be set
+	    to "fit" for the program to do background subtraction.
+	  </li>
+	  <li><span class="boldcode">t_func</span>
+	  and <span class="boldcode">t_order</span>
+	  and <span class="boldcode">t_niter</span>&mdash;These are
+	  some of the key trace fitting parameters: the function to be
+	  used (I frequently use a cubic spline or "spline3"); the
+	  order of the function (varies widely depending on your
+	  data); and the number of times to reject outliers and
+	    refit.
+	  </li>
+	  <li><span class="boldcode">b_sampl</span>&mdash;The region
+	  (relative to the center of the aperture) over which to fit
+	  the background.</li>
+	  <li><span class="boldcode">b_func</span>&mdash;The order of
+	  the function to use when fitting the background.  I often
+	  use 2, for a straight line with a slope.</li>
+	</ul>
+	
+	<p>After you hit enter for a few
+	questions, <span class="code">apall</span> enters interactive
+	mode.  You will see a cut across your 2D spectrum, with
+	apertures automatically identified.  (If things look really
+	weird, you might have the dispersion axis set incorrectly
+	in <span class="code">apextract</span>.)  Useful commands at
+	this stage include:
+	</p>
+	
+	<ul class="spaced">
+	  <li>"<span class="boldcode">n</span>" makes a new
+	    aperture centered on the cursor.
+	  </li>
+	  <li>"<span class="boldcode">l</span>" sets the lower limit
+	    of your latest aperture.
+	  </li>
+	  <li>"<span class="boldcode">u</span>" sets the upper limit
+	    of your latest aperture.
+	  </li>
+	  <li>"<span class="boldcode">b</span>" puts you in background
+	  mode, where you can use "<span class="boldcode">w</span>"
+	  "<span class="boldcode">a</span>" to zoom out and
+	  "<span class="boldcode">w</span>"
+	  "<span class="boldcode">e</span>"
+	  "<span class="boldcode">e</span>" to zoom back in as usual
+	  in IRAF.  "<span class="boldcode">z</span>" deletes an
+	  existing background region,
+	  "<span class="boldcode">s</span>" in two places sets the
+	  boundaries of a new background region, and
+	  "<span class="boldcode">f</span>" applies the changes and
+	  shows you a new fit.  You can also adjust the fitting
+	  parameters as needed using colon commands.  Press
+	  "<span class="boldcode">q</span>" to exit background mode.
+	  </li>
+	  <li>"<span class="boldcode">q</span>"in the main window
+	  (outside of background mode) exits to the next step.
+	  </li>
+	</ul>
+	
+	<p>Next, <span class="code">apall</span> traces the aperture
+	and asks you to confirm the fit.  Ideally, there is a lovely
+	curve that is relatively easy to fit.  Delete any outlying
+	points with "<span class="boldcode">d</span>", then
+	hit "<span class="boldcode">f</span>" to see the new fit.  If
+	the trace is so ugly that no pattern is visible, try fitting a
+	horizonal line.  When satisfied,
+	  hit "<span class="boldcode">q</span>" to exit the trace.
+	</p>
+      <br>
+    </div>
+
+    <div class="footer">
+      Copyright &copy; 2013&ndash;2018 Megan M. Kiminki
+    </div>
+
+  </div>
+
+
+</body>
+</html>

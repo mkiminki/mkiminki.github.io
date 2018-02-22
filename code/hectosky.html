@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../styles/default.css" title="Kiminki default" />
+  <title>Hectosky Program | Megan Kiminki</title>
+  <meta name="description" content="A sky subtraction program for regions with strong nebular emission."/>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+</head>
+
+<body>
+
+  <div id="mainpage">
+
+    <div class="myname">
+      <h1> Megan M. Kiminki </h1>
+      <h4> (formerly Megan M. Bagley) </h4>
+    </div>
+
+    <div id="picture">
+       <img class="sixleft" src="../images/MMK-cholla.jpg" alt="A picture of teddy-bear cholla." />
+      <img class="sixleft" src="../images/MMK-cactus-flower.jpg" alt="Cactus in bloom in northwest Tucson." /> 
+      <img class="sixleft" src="../images/HST-ACS-HH666.jpg" alt="Hubble Space Telescope image of the HH 666 protostellar jet."/>
+      <img class="sixleft" src="../images/MMK-observing-2013.jpg" alt="Observing at the Magellan Telescopes."/>
+      <img class="sixleft" src="../images/MMK-Magellan.jpg" alt="The Magellan telescopes in Chile."/>
+      <img class="sixright" src="../images/MMK-saguaro.jpg" alt="Saguaro in Sabino Canyon."/>
+    </div>
+
+
+    <div id="sidebar">
+      <ul class="menu">
+	<li> <a href="../index.html">Home</a></li>
+	<li> <a href="../research.html">Research</a> </li>
+	<li> <a href="../code/index.html">Code</a> </li>
+	<li> <a href="../publications.html">Publications</a></li>
+	<li> <a href="../notes/index.html">Notes & Tips</a> </li>
+	<li> <a href="../contact.html">Contact Me</a></li>
+      </ul>
+    </div>
+
+    <div id="maintext">
+      
+      <h3 class="header">Hectosky</h3>
+      <hr>
+      
+         <p> One of the final steps in reducing spectroscopic data is
+      subtracting off the contribution from "sky" background, which
+      includes:
+	   <ol>
+	     <li>Airglow from the Earth's atmosphere (e.g., OH, O I,
+      O<sub>2</sub> line emission).</li>
+	     <li>Human-made light pollution.</li>
+	     <li>Emission from your target's immediate surroundings in
+      space.</li>  
+	   </ol>
+	   The latter is particularly problematic when your
+      target lies in an H II region, where the low-density ionized gas
+      produces many bright optical emission lines (H&alpha;, H&beta;,
+      [N II], [S II], etc.). </p>
+
+      <p>Sky subtraction is (usually) relatively easy when observing
+      with a slit spectrograph: you can extract the sky spectrum
+      immediately adjacent to your target spectrum.  Fiber-fed
+      spectrographs, however, present a challenge, as the adjacent sky
+      is not observed simultaneously.</p>
+
+      <p>Typically, in a multi-fiber instrument, a handful of fibers
+      are pointed at blank sky, allowing the observer to construct an
+      average sky emission spectrum.  This method doesn't work well in
+      regions of strong, spatially-variable nebular emission.
+      Instead, observers will often take an additional sky exposure
+      offset from the target pointing by 3-5".  Unfortunately, this
+      means doubling your observing time.</p>
+
+      <p>This is
+      where <a href="https://github.com/mkiminki/hectosky" target="_blank">Hectosky</a>
+      comes in.  Hectosky is an interactive, IDL-based pipeline designed to: 
+	<ol type="a">
+	  <li>Correctly subtract nebular emission lines using fits to
+	  the nearest sky spectrum.</li>
+	  <li>Maximize signal-to-noise in the subtraction of airglow
+	  lines by using all available sky spectra.</li>
+	</ol>
+      </p>
+      <p>Hectosky fits a set of common nebular emission lines in the
+      closest sky spectrum, removing those emission lines much more
+      effectively than when an average sky spectrum is subtracted:</p>
+
+	<div class="image-full">
+	  <div class="center-out">
+	    <div class="center-in-90">
+	      <img class="noline" src="../images/apj520521f4_hr.jpg" alt="Figure 4 from Kiminki et al. 2015"/>
+		<p class="caption">Above: Comparison of the result of
+		subtracting an average sky spectrum (blue) with the
+		result of subtracting sky emission with Hectosky
+		(black).  The original spectrum is shown in gray.
+		(Figure
+		from <a href="http://adsabs.harvard.edu/abs/2015ApJ...813...42K" target="_blank">Kiminki
+		et al. 2015</a>.)</p>
+	    </div>
+	  </div>
+	</div>
+
+	<p>However, Hectosky uses an average sky spectrum for all other wavelengths, greatly increasing the signal-to-noise of the continuum and allowing you to use less of your limited telescope time taking sky spectra:</p>
+	<div class="image-full">
+	  <div class="center-out">
+	    <div class="center-in-60">
+	      <img class="noline" src="../images/apj520521f5_hr.jpg" alt="Figure 5 from Kiminki et al. 2015"/>
+		<p class="caption">Above: Comparison of the continuum
+		signal-to-noise for two stars: subtracting the single
+		closest sky spectrum (gray) versus Hectosky's use of
+		an average sky spectrum (black).  (Figure
+		from <a href="http://adsabs.harvard.edu/abs/2015ApJ...813...42K" target="_blank">Kiminki
+		et al. 2015</a>.)</p>
+	    </div>
+	  </div>
+	</div>
+
+	
+      <p>Hectosky was specifically written for use on data taken with the <a href="http://mmto.org/node/55" target="_blank">Hectospec</a> multi-fiber spectrograph&mdash;and particularly for data reduced with Juan Cabanela's <a href="http://astronomy.mnstate.edu/cabanela/research/ESPECROAD/" target="_blank">E-SPECROAD</a> pipeline&mdash;but the algorithm can be adapted to data from other instruments.</p>
+
+      <p>The Hectosky source code, along with complete instructions for installation and use, can be found in <a href="https://github.com/mkiminki/hectosky" target="_blank">my Hectosky repository</a> on GitHub.</p>
+      <br>
+
+    </div>
+
+    <div class="footer">
+      Copyright &copy; 2013&ndash;2018 Megan M. Kiminki
+    </div>
+
+  </div>
+
+
+</body>
+</html>

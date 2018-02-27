@@ -155,7 +155,7 @@ img.sixright {
 }
 .image-left-20 {
     float:left;
-    margin: 5px 0 5px 20px;
+    margin: 5px 20px 5px 0;
     width:20%;
     height:auto;
 }

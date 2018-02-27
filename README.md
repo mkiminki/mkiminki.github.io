@@ -1,4 +1,4 @@
 # mkiminki.github.io
-New location of Megan Kiminki's personal website.
+Megan Kiminki's personal website.
 
-To view my current website, visit http://spockprime.as.arizona.edu/~megan/
+Copyright (c) 2013&ndash;2018 Megan Kiminki. All rights reserved.

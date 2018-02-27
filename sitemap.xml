@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://mkiminki.github.io/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://mkiminki.github.io/research.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mkiminki.github.io/code/</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mkiminki.github.io/code/hectosky.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mkiminki.github.io/publications.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mkiminki.github.io/notes/</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mkiminki.github.io/notes/irafinstall.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mkiminki.github.io/notes/apall.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mkiminki.github.io/notes/github.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mkiminki.github.io/hectospec/</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mkiminki.github.io/contact.html</loc>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>

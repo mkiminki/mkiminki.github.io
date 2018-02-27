@@ -103,14 +103,14 @@
 	  <p>(The --system flag means it does the installation for everyone on the computer, not just you.)</p>
 
 	  <p>To do a system-wide installation in Mac OS X 10.11 (El
-	  Capitan) and above, you will first need
+	  Capitan) and above, you will need
 	  to <a href="https://apple.stackexchange.com/questions/208478/how-do-i-disable-system-integrity-protection-sip-aka-rootless-on-macos-os-x"
-	  target="_blank">disable System Integrity Protection</a> to
-	  allow the installation script can create a symbolic link
-	  in <span class="code">/usr/include/</span>.  Alternatively,
-	  you can do a single-user installation by running</p>
+	  target="_blank">disable System Integrity Protection</a>
+	  before running the above command>.  Alternatively, you can
+	  do a single-user installation with:</p>
 	  
-	  <p><span class="code">sudo /iraf/iraf/install</span> and answering "no" to the first prompt.</p>
+	  <p><span class="code">sudo /iraf/iraf/install</span> (Then
+	  answer "no" to the first prompt.)</p>
 	  
 	  <p>On all operating systems, the default answers to the
 	    other install prompts should be fine.</p>

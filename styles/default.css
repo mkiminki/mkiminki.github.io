@@ -153,6 +153,12 @@ img.sixright {
     margin:0;
     padding:0;
 }
+.image-left-15 {
+    float:right;
+    margin: 5px 0 5px 20px;
+    width:15%;
+    height:auto;
+}
 .image-left-36 {
     float:left; 
     margin: 5px 20px 5px 0; 
@@ -164,7 +170,7 @@ img.sixright {
     margin: 5px 20px 5px 0; 
     width:45%; 
     height:auto;
-}
+}	     
 .image-right-36 {
     float:right; 
     margin: 5px 0 5px 20px; 

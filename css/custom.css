@@ -19,6 +19,9 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
 }
+.nav-item.active{
+   text-decoration: underline;
+} 
 .nav-link {
     color: #000000;
 }

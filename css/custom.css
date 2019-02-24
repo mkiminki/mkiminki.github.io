@@ -6,7 +6,7 @@ body {
     max-width: 960px;
 }
 .navbar {
-    font-family: 'Tinos', serif;
+    font-family: 'Noto Serif', serif;
 }
 .navbar .navbar-brand {
     font-size: 2rem;

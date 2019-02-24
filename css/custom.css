@@ -13,3 +13,6 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
 }
+.navbar .navbar-link {
+    color: #000000;
+}

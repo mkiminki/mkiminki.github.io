@@ -5,6 +5,9 @@ body {
 .container {
     max-width: 960px;
 }
+.navbar {
+    font-family: 'Roboto Slab', serif;
+}
 .navbar .navbar-brand {
     font-size: 2rem;
 }

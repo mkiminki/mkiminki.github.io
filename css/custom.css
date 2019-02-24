@@ -5,10 +5,10 @@ body {
 .container {
     max-width: 960px;
 }
-.navbar {
-    font-family: 'Noto Serif', serif;
-}
 .navbar .navbar-brand {
     font-size: 2rem;
     font-weight: bold;
+}
+.navbar .navbar-item{
+    font-family: 'Noto Serif', serif;
 }

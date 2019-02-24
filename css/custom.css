@@ -7,8 +7,8 @@ body {
 }
 .navbar {
     font-family: 'Roboto Slab', serif;
-    font-weight: bold;
 }
 .navbar .navbar-brand {
     font-size: 2rem;
+    font-weight: bold;
 }

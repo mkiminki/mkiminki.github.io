@@ -13,8 +13,8 @@ body {
 }
 .jumbotron.hero {
       width: 100%;
-      min-height: 10rem;
-      background: url('images/MMK-LasCampanas.jpg') no-repeat center center;
+      height: 10rem;
+      background-image: url('images/MMK-LasCampanas.jpg') no-repeat center center;
       background-size: cover;
 }
 .navbar {

@@ -11,6 +11,9 @@ body {
     color: #000000;
     font-family: 'Roboto', sans-serif;
 }
+footer {
+    font-family: 'Noto Serif', serif;
+}
 hr {
     border-color: #6c757d;
 }

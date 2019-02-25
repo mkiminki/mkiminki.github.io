@@ -17,6 +17,10 @@ hr {
 .container {
     max-width: 1024px;
 }
+.fa {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 .jumbotron {
       background-image: url("../images/MMK-LasCampanas.jpg");
       background-position: left center;

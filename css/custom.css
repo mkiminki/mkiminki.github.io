@@ -15,12 +15,13 @@ body {
     max-width: 1024px;
 }
 .jumbotron {
-      width: 100%;
-      height: 220px;
       background-image: url("../images/MMK-LasCampanas.jpg");
       background-position: left center;
       background-repeat: no-repeat;
       background-size: cover;
+      height: 220px;
+      margin-bottom: 0rem;
+      width: 100%;
 }
 .navbar {
     font-family: 'Noto Serif', serif;

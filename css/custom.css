@@ -6,7 +6,11 @@ a:hover {
 }
 body {
     background-color: #E5E5E5;
+    color: #000000;
     font-family: 'Roboto', sans-serif;
+}
+hr {
+    border-color: #343a40;
 }
 .col-12 {
     background-color: #FFFFFF;

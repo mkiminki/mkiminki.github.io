@@ -14,8 +14,8 @@ body {
 hr {
     border-color: #6c757d;
 }
-p.p-close {
-    bottom-margin: 0.5rem;
+p.p-footer {
+    margin-bottom: 0.5rem;
 }
 .container {
     max-width: 1024px;

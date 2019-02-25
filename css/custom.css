@@ -12,9 +12,6 @@ body {
 hr {
     border-color: #343a40;
 }
-.col-12 {
-    background-color: #FFFFFF;
-}
 .container {
     max-width: 1024px;
 }

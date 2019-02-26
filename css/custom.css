@@ -58,4 +58,8 @@ p.p-footer {
     text-decoration: underline;
     text-decoration-color: #6c757d;
 }
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
 

@@ -62,4 +62,7 @@ p.p-footer {
     margin-left: 0;
     margin-right: 0;
 }
+.row .row-short {
+    margin-bottom: 0;
+}
 

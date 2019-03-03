@@ -14,17 +14,8 @@ body {
 footer {
     font-size: 0.85rem;
 }
-h1, h2 {
-    font-family: 'Noto Serif', serif;
-}
 hr {
     border-color: #6c757d;
-}
-hr.hr-nobottom {
-    margin-bottom:0;
-}
-hr.hr-notop {
-    margin-top: 0;
 }
 p.p-footer {
     margin-bottom: 0.5rem;
@@ -33,7 +24,7 @@ p.p-footer {
     max-width: 1024px;
 }
 .jumbotron {
-      background-image: url("../images/MMK-LasCampanas.jpg");
+      background-image: url("../images/MMK-LasCampanas-tall.jpg");
       background-position: left center;
       background-repeat: no-repeat;
       background-size: cover;

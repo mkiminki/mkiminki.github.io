@@ -30,11 +30,11 @@ p.p-footer {
       background-size: cover;
       height: 220px;
       margin-bottom: 1rem;
-      margin-top: 1rem;
       width: 100%;
 }
 .navbar {
     font-family: 'Noto Serif', serif;
+    margin-bottom: 0;
 }
 .navbar-brand {
     color: #000000;

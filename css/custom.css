@@ -33,7 +33,9 @@ p.p-footer {
       width: 100%;
 }
 .navbar {
+    background-color: #6c757d;
     margin-bottom: 0;
+
 }
 .navbar-brand {
     color: #000000;

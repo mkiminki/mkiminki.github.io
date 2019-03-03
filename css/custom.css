@@ -24,11 +24,11 @@ p.p-footer {
     max-width: 1024px;
 }
 .jumbotron {
-      background-image: url("../images/MMK-LasCampanas-tall.jpg");
+      background-image: url("../images/MMK-LasCampanas-medium.jpg");
       background-position: left center;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 440px;
+      height: 220px;
       margin-bottom: 1rem;
       width: 100%;
 }

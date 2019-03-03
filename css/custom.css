@@ -34,8 +34,7 @@ p.p-footer {
 }
 .navbar {
     background-color: #6c757d;
-    margin-bottom: 0;
-
+    font-family: 'Noto Serif', serif;
 }
 .navbar-brand {
     color: #000000;

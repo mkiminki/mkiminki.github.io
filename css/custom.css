@@ -17,6 +17,9 @@ footer {
 hr {
     border-color: #6c757d;
 }
+hr.hr-notop {
+    margin-top: 0;
+}
 p.p-footer {
     margin-bottom: 0.5rem;
 }

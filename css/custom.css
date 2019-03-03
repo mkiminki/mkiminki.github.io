@@ -7,6 +7,7 @@ a:hover {
     text-decoration-color: #6c757d;
 }
 body {
+    background-color: #E5E5E5;
     color: #000000;
     font-family: 'Roboto', sans-serif;
 }
@@ -42,7 +43,6 @@ p.p-footer {
       width: 100%;
 }
 .navbar {
-    background-color: #E5E5E5;
     font-family: 'Noto Serif', serif;
     margin-bottom: 0;
 }

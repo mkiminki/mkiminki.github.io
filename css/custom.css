@@ -63,7 +63,10 @@ p.p-footer {
     margin-left: 0;
     margin-right: 0;
 }
-.row-short {
+.row-short-bottom {
     margin-bottom: -15px;
+}
+.row-tall-top {
+    margin-top: 15px;
 }
 

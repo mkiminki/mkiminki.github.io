@@ -33,8 +33,8 @@ p.p-footer {
       width: 100%;
 }
 .navbar {
-    background-color: #6c757d;
     font-family: 'Noto Serif', serif;
+    margin-bottom: 0;
 }
 .navbar-brand {
     color: #000000;
@@ -63,10 +63,7 @@ p.p-footer {
     margin-left: 0;
     margin-right: 0;
 }
-.row-short-bottom {
+.row-short {
     margin-bottom: -15px;
-}
-.row-tall-top {
-    margin-top: 15px;
 }
 

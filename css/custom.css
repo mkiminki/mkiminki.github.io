@@ -10,3 +10,6 @@ body {
     height: 400px;
     width: 100%;
 }
+.navbar-brand {
+    font-size: 1.7rem;
+}

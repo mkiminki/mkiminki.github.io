@@ -1,5 +1,5 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 .jumbotron-large {
     background-image: url("../images/MMK-LasCampanas-banner.jpg");
@@ -8,4 +8,7 @@ body {
     background-size: cover;
     height: 400px;
     width: 100%;
+}
+.navbar-brand {
+    font-family: 'Permanent Marker' serif;
 }

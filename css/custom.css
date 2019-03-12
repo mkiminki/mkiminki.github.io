@@ -1,4 +1,5 @@
 body {
+    color: #000000;
     font-family: 'Raleway', sans-serif;
 }
 .jumbotron-large {
@@ -8,8 +9,4 @@ body {
     background-size: cover;
     height: 400px;
     width: 100%;
-}
-.navbar-brand {
-    font-family: 'Permanent Marker', serif;
-    font-size: 1.5rem;
 }

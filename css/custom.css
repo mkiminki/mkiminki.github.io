@@ -1,3 +1,10 @@
+a {
+    color: #E5E5E5;
+}
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: #E5E5E5; 
+}
 body {
     color: #000000;
     font-family: 'Raleway', sans-serif;
@@ -18,7 +25,6 @@ body {
     color: #E5E5E5;
 }
 .nav-item.active{
-    text-decoration: underline;
     text-decoration-color: #E5E5E5;
 } 
 .nav-link {

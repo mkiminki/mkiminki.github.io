@@ -24,4 +24,7 @@ body {
 .navbar-brand {
     font-size: 1.7rem;
 }
-
+.nav-link:hover, .nav-link:focus {
+    text-decoration: underline;
+    text-decoration-color: #E5E5E5;
+}

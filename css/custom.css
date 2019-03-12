@@ -17,6 +17,10 @@ body {
 .navbar-brand {
     font-size: 1.7rem;
 }
+.nav-item.active{
+    text-decoration: underline;
+    text-decoration-color: #E5E5E5
+} 
 .nav-link {
     color: #E5E5E5;
 }

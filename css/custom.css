@@ -1,3 +1,6 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
 .jumbotron-large {
     background-image: url("../images/MMK-LasCampanas-banner.jpg");
     background-position: left bottom;

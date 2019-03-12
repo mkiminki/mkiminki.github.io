@@ -12,14 +12,14 @@ body {
 }
 .navbar {
     background: rgba(0,0,0,0.4);
-    color: #E5E5E5;
 }
 .navbar-brand {
     font-size: 1.7rem;
+    color: #E5E5E5;
 }
 .nav-item.active{
     text-decoration: underline;
-    text-decoration-color: #E5E5E5
+    text-decoration-color: #E5E5E5;
 } 
 .nav-link {
     color: #E5E5E5;

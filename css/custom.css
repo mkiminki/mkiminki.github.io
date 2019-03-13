@@ -28,6 +28,10 @@ body {
 .navbar-brand {
     font-size: 1.7rem;
 }
+.navbar-toggler {
+    color: var(--light-gray);
+    border-color: var(--light-gray);
+}
 .nav-link:hover, .nav-link:focus {
     text-decoration: underline;
     text-decoration-color: var(--light-gray);

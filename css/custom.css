@@ -16,7 +16,7 @@ body {
 }
 .jumbotron-large {
     background-image: url("../images/MMK-LasCampanas-banner.jpg");
-    background-position: left bottom;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;

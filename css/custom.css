@@ -10,6 +10,7 @@ a:hover {
     text-decoration-color: var(--light-gray); 
 }
 body {
+    background-color: var(--light-gray);
     color: #000000;
     font-family: 'Raleway', sans-serif;
 }

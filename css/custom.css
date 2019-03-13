@@ -1,5 +1,5 @@
 :root {
-    --light-gray: #FFFFFF;
+    --light-gray: #F9F9F9;
 }
 a {
     color: var(--light-gray);

@@ -28,6 +28,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 160px;
+    padding-top: 10rem;
     width: 100%;
 }
 .navbar {

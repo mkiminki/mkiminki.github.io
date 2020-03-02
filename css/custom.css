@@ -1,54 +1,64 @@
 :root {
-    --blue-gray: #707E8F;
-    --light-gray: #F9F9F9;
+    --dark: #707E8F;
+    --light: #F9F9F9;
 }
-a {
-    color: var(--light-gray);
-}
-a:hover {
-    color: var(--light-gray); 
-    text-decoration: underline;
-    text-decoration-color: var(--light-gray); 
+html {
+    position: relative;
+    min-height: 100%;
 }
 body {
-    background-color: var(--light-gray);
+    background-color: var(--light);
     color: #000000;
     font-family: 'Raleway', sans-serif;
+    margin-bottom: 3rem;
 }
-.jumbotron-large {
-    background-image: url("../images/MMK-LasCampanas-banner.jpg");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 320px;
-    width: 100%;
+a {
+    color: var(--dark);
 }
-.jumbotron-small {
-    background-image: url("../images/MMK-LasCampanas-sky.jpg");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80px;
+a:active, a:focus, a:hover {
+    color: black;
+    text-decoration: none;
+}
+.footer {
+    bottom: 0;
+    height: 3rem;
+    position: absolute;
     width: 100%;
 }
 .navbar {
-    background-color: var(--blue-gray);
+    background-color: var(--dark);
+    font-size: 1rem;
+}
+.navbar a {
+    color: var(--light);
+}
+.navbar a:hover {
+    color: var(--light); 
+    text-decoration: underline;
+    text-decoration-color: var(--light); 
 }
 .navbar-brand {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
-.nav-link:hover, .nav-link:focus {
+.nav-link:active, .nav-link:focus, .nav-link:hover {
     text-decoration: underline;
-    text-decoration-color: var(--light-gray);
+    text-decoration-color: var(--light);
 }
 .navbar-toggler {
-    color: var(--light-gray);
-    border-color: var(--light-gray);
+    color: var(--light);
+    border-color: var(--light);
 }
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(249, 249, 249, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(249, 249, 249, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-.text-title {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 2.5rem;
+.small {
+    font-size: 0.85rem;
 }
+.vertical {
+    vertical-align: -0.35rem;
+}
+.wrapper {
+    width: 80%;
+    max-width: 1280px;
+}
+

@@ -8,12 +8,12 @@ html {
 }
 body {
     background-color: var(--light);
-    color: #000000;
+    color: black;
     font-family: 'Raleway', sans-serif;
     margin-bottom: 3rem;
 }
 a {
-    color: var(--dark);
+    color: black;
 }
 a:active, a:focus, a:hover {
     color: black;
@@ -24,6 +24,9 @@ a:active, a:focus, a:hover {
     height: 3rem;
     position: absolute;
     width: 100%;
+}
+.muted {
+    color: var(--dark);
 }
 .navbar {
     background-color: var(--dark);

@@ -32,6 +32,9 @@ a:active, a:focus, a:hover {
 .highlight {
     color: var(--accent);
 }
+.highlight:hover {
+    color: var(--accent);
+}
 .muted {
     color: var(--dark);
 }

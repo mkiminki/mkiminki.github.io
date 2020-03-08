@@ -1,6 +1,7 @@
 :root {
-    --dark: #707E8F;
     --light: #F9F9F9;
+    --dark: #707E8F;
+    --accent: #385bb9;
 }
 html {
     position: relative;
@@ -17,13 +18,19 @@ a {
 }
 a:active, a:focus, a:hover {
     color: black;
-    text-decoration: none;
+    text-decoration: underline;
 }
 .footer {
     bottom: 0;
     height: 3rem;
     position: absolute;
     width: 100%;
+}
+.footer a:hover {
+    text-decoration: none;
+}
+.highlight {
+    color: var(--accent);
 }
 .muted {
     color: var(--dark);
@@ -37,7 +44,6 @@ a:active, a:focus, a:hover {
 }
 .navbar a:hover {
     color: var(--light); 
-    text-decoration: underline;
     text-decoration-color: var(--light); 
 }
 .navbar-brand {
@@ -56,6 +62,9 @@ a:active, a:focus, a:hover {
 }
 .small {
     font-size: 0.85rem;
+}
+.padded li {
+    margin-bottom: 1rem;
 }
 .vertical {
     vertical-align: -0.35rem;

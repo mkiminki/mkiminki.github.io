@@ -1,178 +1,128 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&family=Overpass+Mono">
+    <title>How To Install IRAF | Megan Kiminki</title>
+    <meta name="description" content="Step-by-step instructions for installing IRAF v2.16.">
+  </head>
 
-<head>
-  <link rel="stylesheet" type="text/css" href="../styles/default.css" title="Kiminki default" />
-  <title>How To Install IRAF | Megan Kiminki</title>
-  <meta name="description" content="Step-by-step instructions for installing IRAF v2.16."/>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-</head>
+  <body>
 
-<body>
+    <header>
+      <nav class="navbar navbar-expand-md py-0 px-md-4">
+	<a class="navbar-brand" href="../index.html">Megan Kiminki</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="collapsingNavbar">
+	  <ul class="navbar-nav ml-auto text-center">
+	    <li class="nav-item px-md-1 active">
+	      <a class="nav-link" href="../index.html">Home</a>
+	    </li>
+	    <li class="nav-item px-md-1">
+	      <a class="nav-link" href="../research.html">Science</a>
+	    </li>
+	    <li class="nav-item px-md-1">
+	      <a class="nav-link" href="../notes/index.html">Resources</a>
+	    </li>
+	    <li class="nav-item pl-md-1">
+	      <a class="nav-link" href="../contact.html">Contact</a>
+	    </li>
+	  </ul>
+	</div>
+    </header>
 
-  <div id="mainpage">
-
-    <div class="myname">
-      <h1> Megan M. Kiminki </h1>
-      <h4> (formerly Megan M. Bagley) </h4>
-    </div>
-
-    <div id="picture">
-      <img class="sixleft" src="../images/MMK-cholla.jpg" alt="A picture of teddy-bear cholla." />
-      <img class="sixleft" src="../images/MMK-cactus-flower.jpg" alt="Cactus in bloom in northwest Tucson." /> 
-      <img class="sixleft" src="../images/HST-ACS-HH666.jpg" alt="Hubble Space Telescope image of the HH 666 protostellar jet."/>
-      <img class="sixleft" src="../images/MMK-observing-2013.jpg" alt="Observing at the Magellan Telescopes."/>
-      <img class="sixleft" src="../images/MMK-Magellan.jpg" alt="The Magellan telescopes in Chile."/>
-      <img class="sixright" src="../images/MMK-saguaro.jpg" alt="Saguaro in Sabino Canyon."/>
-
-    </div>
-
-
-    <div id="sidebar">
-      <ul class="menu">
-	<li> <a href="../index.html">Home</a></li>
-	<li> <a href="../research.html">Research</a> </li>
-	<li> <a href="../code/index.html">Code</a> </li>
-	<li> <a href="../publications.html">Publications</a></li>
-	<li> <a href="../notes/index.html">Notes & Tips</a> </li>
-	<li> <a href="../contact.html">Contact Me</a></li>
-      </ul class="menu">
-    </div>
-
-    <div id="maintext">
-      
-      <h3 class="header">How To Install IRAF</h3>
-      <hr>
-      
-      <p>With the advent of v2.16, installing IRAF became
-	significantly easier.  The following instructions have worked
-	for installations on Fedora, Ubuntu, and several versions of Mac
-	OS X; they were most recently tested in June 2017 on macOS
-	10.12 Sierra.  A basic familiarity with the command line
-	is assumed.</p>
-
-      <ol>
+    <main role="main" class="container-lg">
+      <section class="row align-items-center">
 	
-	<li>
-	  <p>Download IRAF from <a href="http://iraf.noao.edu/"
-	   target="_blank">here</a>.  I recommend the "Combo
-	   32/64-bit" version appropriate for your operating system;
-	   most of IRAF has been updated to 64-bit, but there are a
-	   few old packages that work better (or only) in 32-bit.</p>
-	</li>
-
-	<li>
-	  <p>Create an IRAF directory,
-	  typically <span class="code">/iraf/iraf</span>, and unpack
-	  the tarball there.</p>
-	  
-	  <p>i.e., with <span class="code">tar -xvzf
-	      iraf-whatever.tar.gz</span></p>
-	</li>
-	
-
-	<li>
-	  <p>Make sure you're working in a tcsh environment (all my
-	terminals are in bash by default); the IRAF installation will
-	fail in bash. Type <span class="code">tcsh</span> in a
-	terminal to get into tcsh.</p>
-	</li>
-
-	<li>
-	  <p>Define the $iraf variable in your environment.  I have
-	  always done this by adding the following line to my .tcshrc
-	  file:</p>
-	  
-	  <p><span class="code">setenv IRAF "/iraf/iraf/"</span></p>
-	  
-	  <p>You'll then need to run the .tcshrc file
-	  (<span class="code">source ~/.tcshrc</span>), repoen a
-	  terminal, or re-enter tcsh to make sure the variable is
-	  set.</p>
-	  
-          <p>For good measure, I put the equivalent line in my .bashrc file:</p>
-	  
-	  <p><span class="code">export IRAF="/iraf/iraf/"</span></p>
-	</li>
-
-	<li>
-	  <p>On Linux or Mac OS X 10.10 (Yosemite) and below, run the installation script with:</p>
-	  
-	  <p><span class="code">sudo /iraf/iraf/install --system</span></p>
-	  
-	  <p>(The --system flag means it does the installation for everyone on the computer, not just you.)</p>
-
-	  <p>To do a system-wide installation in Mac OS X 10.11 (El
-	  Capitan) and above, you will need
-	  to <a href="https://apple.stackexchange.com/questions/208478/how-do-i-disable-system-integrity-protection-sip-aka-rootless-on-macos-os-x"
-	  target="_blank">disable System Integrity Protection</a>
-	  before running the above command.  Alternatively, you can
-	  do a single-user installation with:</p>
-	  
-	  <p><span class="code">sudo /iraf/iraf/install</span></p>
-	    <p>(Then answer "no" to the first prompt.)</p>
-	  
-	  <p>On all operating systems, the default answers to the
-	    other install prompts should be fine.</p>
-	</li>
-	    
-	<li>
-	  <p>Install xgterm, which now helpfully comes in the same
-	  tarball as IRAF.  All you have to do is link the executable
-	  to somewhere in your $PATH.</p>
-	  
-	  <p><span class="code">cd /usr/local/bin</span> [or
-	  equivalent location]</p>
-	  
-	  <p><span class="code">sudo ln -s
-	  /iraf/iraf/vendor/x11iraf/bin.macintel/xgterm .</span> [or
-	    bin.linux as appropriate]</p>
-	</li>
-
-	<li>
-	  <p>Check that it works by
-	  doing <span class="code">mkiraf</span> wherever you want
-	  your home IRAF stuff to be.  Edit your login.cl preferences
-	  and try opening an xgterm and starting IRAF.</p>
-	</li>
-
-	<li>
-	  <p>Add desired external packages (also much easier than it
-	  used to be).  Go
-	  to <span class="code">/iraf/iraf/extern/</span> and follow
-	  the instructions in the README file, executing:</p>
-	  
-	  <p><span class="code">sudo ./configure</span></p>
-	  
-	  <p><span class="code">sudo make check</span> [to list the available packages]</p>
-	  
-	  <p><span class="code">sudo make packagename</span>
-	    [e.g., <span class="code">sudo make stsdas</span>]</p>
-	</li>
-
-      </ol>
-
-      <p>Other references that may be helpful:</p>
-      <ul class="spaced">
-	<li><a href="http://www.iac.es/sieinvens/siepedia/pmwiki.php?n=HOWTOs.IrafMacOSX"
-	target="_blank">How to install IRAF 2.16.1 in Mac OS X</a>
-	from SIEpedia.
-	</li>
-
-	<li><a href="http://iraf.net/forum/viewtopic.php?showtopic=1469719"
-	target="_blank">This iraf.net thread</a> about
-	installing external packages in macOS 10.13 High Sierra.
-	</li>
-      </ul>
-
-    </div>
-
-    <div class="footer">
-      Copyright &copy; 2013&ndash;2018 Megan M. Kiminki
-    </div>
-
-  </div>
+	<div class="container-fluid col-12 col-sm-9 my-4">
+	  <h4 class="mb-4 text-center">How to Install IRAF v2.16.1</h4>
+	  <div class="alert alert-caution" role="alert">
+	    <p class="mb-0">These instructions apply to IRAF v2.16.1, the last version released by the National Optical Astronomy Observatory (NOAO). <a class="highlight" href="http://ast.noao.edu/data/software">IRAF is no longer available through NOAO</a>. For an alternative, see the <a class="highlight" href="https://iraf-community.github.io/">IRAF Community Distribution</a>.</p>
+	  </div>
+	  <div class="alert alert-primary" role="alert">
+	    <p class="mb-0">These instructions were developed on Fedora and Ubuntu systems and expanded for MacOS X.  They were last tested in July 2017 on MacOS 10.12 Sierra. For tips specific to newer versions of MacOS X, the Instituto de Astrof&#237;sica de Canarias maintains a page on <a class="highlight" href="https://research.iac.es/sieinvens/siepedia/pmwiki.php?n=HOWTOs.IrafMacOSX" target="_blank">How to Install IRAF on MacOS X</a>.</p>
+	  </div>
+	  <ol>
+	    <li>
+	      <p>Acquire an IRAF tarball (i.e., an <span class="code">iraf-[architecture].tar.gz</span> file). These were traditionally available in 32-bit, 64-bit, and "combo" versions. I recommend the combo version, if your operating system allows it; most of IRAF has been updated to 64-bit, but there are a few old packages that work better (or only) in 32-bit.</p>
+	    </li>
+	    <li>
+	      <p>Create an IRAF directory, traditionally <span class="code">/iraf/iraf</span>, and unpack the tarball there.  For example: <span class="code">tar -xvzf iraf-[architecture].tar.gz</span></p>
+	    </li>
+	    <li>
+	      <p>Make sure you're working in a tcsh environment, because the IRAF installation will fail in bash. Type <span class="code">tcsh</span> in a terminal to get into tcsh.</p>
+	    </li>
+	    <li>
+	      <p>Define the $iraf variable in your environment. I have always done this by adding the following line to my .tcshrc file: <span class="code">setenv IRAF "/iraf/iraf/"</span></p>
+	      <p>To make sure the variable is set, you'll then need to reopen a terminal, re-enter tcsh, or run the .tcshrc file with <span class="code">source ~/.tcshrc</span></p>
+	      <p>For good measure, I also add the equivalent line to my .bashrc file: <span class="code">export IRAF="/iraf/iraf/"</span>
+	    </li>
+	    <li>
+	      <p>On Linux sytems and on Mac OS X up through 10.10 Yosemite, install IRAF for all users with:</p>
+	      <p class="code">sudo /iraf/iraf/install --system</p>
+	      <p>The default answers to the install prompts should be fine.</p>
+	      <p>For Mac OS X 10.11 El Capitan and above, you will need to <a href="https://apple.stackexchange.com/questions/208478/how-do-i-disable-system-integrity-protection-sip-aka-rootless-on-macos-os-x" target="_blank" class="highlight"> disable System Integrity Protection</a> before running the above command.</p>
+	      <p>Alternatively, you can do a single-user installation with:</p>
+	      <p class="code">sudo /iraf/iraf/install</p>
+	      <p>In this case, answer "no" to the first prompt, then accept the subsequent defaults.</p>
+	    </li>
+	    <li>
+	      <p>Install xgterm, which was helpfully included in the IRAF tarball. All you have to do is link the executable to somewhere in your $PATH. For example, you might run the following two commands:</p>
+	      <p class="code">cd /usr/local/bin</p>
+	      <p class="code">sudo ln -s /iraf/iraf/vendor/x11iraf/bin.macintel/xgterm .</p>
+	      <p>(Use any workable $PATH location in the first command, and swap <span class="code">bin.macintel</span> with  <span class="code">bin.linux</span> in the second command as appropriate.)</p>
+	    </li>
+	    <li>
+	      <p>Check that it works: go to the folder that will be your personal IRAF home and execute the <span class="code">mkiraf</span> command. Edit any desired preferences in the resulting login.cl file, then try opening an xgterm and starting IRAF.</p>
+	    </li>
+	    <li>
+	      <p>Add desired external packages. Go to <span class="code">/iraf/iraf/extern/</span> (substituting the IRAF directory you created in step #2) and review the instructions in the README file.</p>
+	      <p>Initial set-up for external packages:<p/>
+	      <p class="code">sudo ./configure</p>
+	      <p>To list available packages:</p>
+	      <p class="code">sudo make check</p>
+	      <p>To install a particular external package:</p>
+	      <p class="code">sudo make [packagename]</p>
+	      <p> e.g., <span class="code">sudo make stsdas</span></p>
+	      <p>There is an issue with installing external packages on MacOS 10.13 High Sierra.  See <a class="highlight" href="https://iraf.net/forum/viewtopic.php?showtopic=1469719" target="_blank">this iraf.net thread</a> for details and a workaround.</p>
+	    </li>
+	  </ol>
+	</div>
 
 
-</body>
+
+	</section>
+    </main>
+
+      <footer class="footer text-muted text-center">
+	<div class="container">
+	  <div class="row">
+	    <div class="col-12">
+	      <p>
+		<span class="small">&copy; 2013-2020 Megan Kiminki</span>
+		&nbsp;&nbsp;&vert;&nbsp;&nbsp;
+		<a class="muted" href="https://github.com/mkiminki" target="_blank">
+		  <i class="fab fa-github fa-2x vertical"></i>
+		</a>
+		&nbsp;
+		<a class="muted" href="https://www.linkedin.com/in/megan-kiminki/" target="blank">
+		  <i class="fab fa-linkedin fa-2x vertical"></i>
+		</a>
+	      </p>
+	    </div>
+	   </div
+	</div>
+    </footer> 
+
+    <script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>    
+
+  </body>    
+      
 </html>

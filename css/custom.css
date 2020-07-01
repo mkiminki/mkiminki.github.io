@@ -2,6 +2,8 @@
     --light: #F9F9F9;
     --dark: #707E8F;
     --accent: #385bb9;
+    --warning: #ffff99;
+    --notice: #cce5ff;
 }
 html {
     position: relative;
@@ -19,6 +21,24 @@ a {
 a:active, a:focus, a:hover {
     color: black;
     text-decoration: underline;
+}
+ol {
+    padding-right: 20px;
+}
+.alert-caution {
+    background-color: var(--warning);
+    border-color: var(--dark);
+    color: black;
+    font-size: 0.85rem;
+}
+.alert-primary {
+    background-color: notice;
+    border-color: var(--dark);
+    color: black;
+    font-size: 0.85rem;
+}
+.code {
+    font-family: 'Overpass Mono', monospace;
 }
 .footer {
     bottom: 0;

@@ -39,7 +39,7 @@ ol {
 }
 .code {
     font-family: 'Overpass Mono', monospace;
-    white-space: pre-wrap;
+    word-break: break-all;
 }
 .footer {
     bottom: 0;

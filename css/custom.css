@@ -39,6 +39,8 @@ ol {
 }
 .code {
     font-family: 'Overpass Mono', monospace;
+}
+.longcode {
     word-break: break-all;
 }
 .footer {

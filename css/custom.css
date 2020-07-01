@@ -25,9 +25,6 @@ a:active, a:focus, a:hover {
 ol {
     padding-right: 20px;
 }
-span {
-    word-wrap: break-word;
-}
 .alert-caution {
     background-color: var(--warning);
     border-color: var(--dark);
@@ -42,6 +39,7 @@ span {
 }
 .code {
     font-family: 'Overpass Mono', monospace;
+    white-space: pre-wrap;
 }
 .footer {
     bottom: 0;

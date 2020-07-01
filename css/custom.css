@@ -25,6 +25,9 @@ a:active, a:focus, a:hover {
 ol {
     padding-right: 20px;
 }
+span {
+    word-wrap: break-word;
+}
 .alert-caution {
     background-color: var(--warning);
     border-color: var(--dark);

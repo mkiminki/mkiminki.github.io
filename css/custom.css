@@ -22,6 +22,9 @@ a:active, a:focus, a:hover {
     color: black;
     text-decoration: underline;
 }
+.fa-2x {
+  vertical-align: middle;
+}
 .navbar {
     background-color: var(--dark);
     font-size: 1rem;
@@ -46,7 +49,7 @@ a:active, a:focus, a:hover {
 .navbar-toggler:hover {
     border:1px solid var(--light);
 }
-.wrapper-image {
+.wrapper-image-large {
     width: 80%;
     max-width: 1280px;
 }

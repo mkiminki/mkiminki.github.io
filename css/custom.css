@@ -1,9 +1,7 @@
 :root {
     --light: #F9F9F9;
-    --dark: #707E8F;
-    --accent: #385bb9;
-    --warning: #ffff99;
-    --notice: #cce5ff;
+    --dark: #7D8AAC;
+    --darker: #323744;
 }
 html {
     position: relative;
@@ -11,15 +9,15 @@ html {
 }
 body {
     background-color: var(--light);
-    color: black;
+    color: var(--darker);
     font-family: 'Raleway', sans-serif;
     height: 100vh;
 }
 a {
-    color: black;
+    color: var(--darker);
 }
 a:active, a:focus, a:hover {
-    color: black;
+    color: var(--darker);
     text-decoration: underline;
 }
 .fa-2x {

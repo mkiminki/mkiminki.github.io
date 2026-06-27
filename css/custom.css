@@ -1,7 +1,8 @@
 :root {
     --light: #F9F9F9;
     --dark: #7D8AAC;
-    --darker: #323744;
+    --darker: #646e89;
+    --darkest: #252933;
 }
 html {
     position: relative;
@@ -9,22 +10,22 @@ html {
 }
 body {
     background-color: var(--light);
-    color: var(--darker);
+    color: var(--darkest);
     font-family: 'Raleway', sans-serif;
     height: 100vh;
 }
 a {
-    color: var(--darker);
+    color: var(--darkest);
 }
 a:active, a:focus, a:hover {
-    color: var(--darker);
+    color: var(--darkest);
     text-decoration: underline;
 }
 .fa-2x {
   vertical-align: middle;
 }
 .navbar {
-    background-color: var(--dark);
+    background-color: var(--darker);
     font-size: 1rem;
 }
 .navbar a {

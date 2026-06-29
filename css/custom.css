@@ -21,6 +21,9 @@ a:active, a:focus, a:hover {
     color: var(--darkest);
     text-decoration: underline;
 }
+.align-items-center {
+    transform: translateY(-10%);
+}
 .fa-2x {
   vertical-align: middle;
 }

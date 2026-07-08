@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/all.min.css">
+		<link rel="stylesheet" href="/css/custom.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+
+		<title>apall | Megan Kiminki</title>
+		<meta name="description" content="Tips for aperture extraction in IRAF">
+	</head>
+
+    <body>
+
+		<div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+
+			<header class-="mb-auto">
+				<nav class="navbar navbar-dark navbar-expand-md px-2 px-md-4 py-0">
+					<a class="navbar-brand" href="/index.html">Megan Kiminki</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="fa fa-bars fa-lg"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="collapsingNavbar">
+						<ul class="navbar-nav ms-auto text-center">
+							<li class="nav-item px-md-1">
+								<a class="nav-link" href="/index.html">Home</a>
+							</li>
+							<li class="nav-item px-md-1">
+								<a class="nav-link" href="/science/index.html">Science</a>
+							</li>
+							<li class="nav-item px-md-1">
+								<a class="nav-link" href="/notes/index.html">Resources</a>
+							</li>
+							<li class="nav-item pl-md-1">
+								<a class="nav-link" href="/contact.html">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+
+			<main role="main" class="container-lg flex-grow-1">
+				<section class="row justify-content-center h-100 align-items-md-center mt-4">
+					<div class="col-auto col-md-6 px-3 px-lg-2">
+						<h1 class="h1-title text-muted pb-3">Aperture Extraction in IRAF</h1>
+						<p>
+							(Based on my experience reducing split spectroscopy data.)
+						</p>
+                        <h4 class="h4-title text-muted pb-2 pt-2">Apall Parameters</h4>
+                        <p class="mb-4">
+							The "apall" task has an enormous number of parameters.
+                            I tend to set all the yes/no options on the first page to "yes" 
+                            the first time I find apertures for a particular data set. 
+                            Other parameters you may want to set, depending on your data 
+                            (either before running or while running interactively) are:
+						</p>
+						<ul>
+							<li class="mb-3">
+								<span class="code-bold">line</span> &mdash; Defaults to the center of the image. 
+                                If you're looking at something like an emission-line galaxy 
+                                that has a very weak continuum, you may want to center this on 
+                                a bright emission line instead.
+							</li>
+                            <li class="mb-3">
+								<span class="code-bold">nsum</span> &mdash; With a faint source, 
+                                you may need to increase this to sum over more lines.
+							</li>
+                            <li class="mb-3">
+								<span class="code-bold">lower</span> &amp; <span class="code-bold">upper</span> &mdash; 
+                                Adjust according to the width of your aperture.
+							</li>
+                            <li class="mb-3">
+								<span class="code-bold">nfind</span> &mdash; If you expect to find 
+                                more than one aperture (e.g., you're doing echelle spectoscopy), 
+                                set this to the number of expected apertures. 
+							</li>
+                            <li class="mb-3">
+								<span class="code-bold">backgro</span> &mdash; 
+                                This must be set to "fit" for the program to do background subtraction.
+							</li>
+                            <li class="mb-3">
+								<span class="code-bold">t_func</span> &amp; <span class="code-bold">t_order</span>
+                                &amp; <span class="code-bold">t_niter</span> &mdash; 
+                                These are three of the key trace fitting parameters.  
+                                "t_func" is the function to be used (I frequently use a cubic spline or "spline3"), 
+                                "t_order" is the order of the function (varies widely depending on your data), 
+                                and "t_niter" is the number of times to reject outliers and refit.
+							</li>
+                            <li class="mb-3">
+								<span class="code-bold">b_sampl</span> &mdash; 
+                                The region (relative to the center of the aperture) over which to fit the background.
+							</li>
+                            <li class="mb-3">
+								<span class="code-bold">b_func</span> &mdash; 
+                                The order of the function to use when fitting the background. 
+                                I often use 2, for a straight line with slope and intercept.
+							</li>
+						</ul>
+                        <h4 class="h4-title text-muted pb-2 pt-2">Apall Commands</h4>
+                        <p class="mb-4">
+                            After you hit enter for a few questions, "apall" enters interactive mode. 
+                            You will see a cut across your 2D spectrum, with apertures automatically identified. 
+                            (If things look really weird, you may have set the dispersion axis incorrectly.) 
+                            Useful commands at this stage include:
+                        </p>
+                        <ul>
+							<li class="mb-3">
+								<span class="code-bold">"n"</span> makes a new aperture centered on the cursor.
+							</li>
+                            <li class="mb-3">
+								<span class="code-bold">"l"</span> sets the lower limit of your latest aperture.
+							</li>
+                            <li class="mb-3">
+								<span class="code-bold">"u"</span> sets the upper limit of your latest aperture.
+							</li>
+                            <li class="mb-3">
+								<span class="code-bold">"b"</span> puts you in background mode, 
+                                where you can use <span class="code-bold">"w a"</span> to zoom out 
+                                and <span class="code-bold">"w e e"</span> to zoom back in as usual in IRAF. 
+                                <span class="code-bold">"z"</span> deletes an existing background region, 
+                                <span class="code-bold">"s"</span> in two places sets the boundaries 
+                                of a new background region, 
+                                and <span class="code-bold">"f"</span> applies the changes and shows you a new fit. 
+                                You can also adjust the fitting parameters as needed using colon commands. 
+                                Press <span class="code-bold">"q"</span> to exit the background setting.
+							</li>
+                            <li class="mb-3">
+								<span class="code-bold">"q"</span> in the main apall window exits to the next step.
+							</li>
+                        </ul>
+                        <p class="mb-4">
+                            Next, "apall" traces the aperture and asks you to confirm the fit. 
+                            Ideally, there is a lovely curve that is relatively easy to fit. 
+                            Delete any outlying points with <span class="code-bold">"d"</span>, 
+                            then hit <span class="code-bold">"f"</span> to see the new fit. 
+                            If the trace is so ugly that no pattern is visible, try fitting a horizontal line. 
+                            When satisfied, hit <span class="code-bold">"q"</span> to exit the trace.
+                        </p>
+					</div>
+				</section>
+			</main>
+
+            <footer class="footer mt-auto py-3 text-center text-muted">
+				<span class="small">&copy; 2013-2026 Megan Kiminki</span>
+			</footer>
+
+		</div>
+
+		<script src="/js/jquery.slim.min.js"></script>
+		<script src="/js/bootstrap.bundle.min.js"></script>    
+
+	</body> 
+          
+</html>

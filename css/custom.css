@@ -21,8 +21,12 @@ a:active, a:focus, a:hover {
     color: var(--darkest);
     text-decoration: underline;
 }
-.align-nudge-up {
-    transform: translateY(-25%);
+.code {
+    font-family: 'Overpass Mono', monospace;
+}
+.code-bold {
+    font-family: 'Overpass Mono', monospace;
+    font-weight: bold;
 }
 .fa-2x {
   vertical-align: middle;

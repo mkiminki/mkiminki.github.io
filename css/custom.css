@@ -64,11 +64,15 @@ a:active, a:focus, a:hover {
 .navbar-toggler:hover {
     border:1px solid var(--light);
 }
-.wrapper-image-full {
-    width: 100%;
+.wrapper-image-70 {
+    width: 80%;
     max-width: 1280px;
 }
-.wrapper-image-large {
+.wrapper-image-80 {
     width: 80%;
+    max-width: 1280px;
+}
+.wrapper-image-90 {
+    width: 90%;
     max-width: 1280px;
 }

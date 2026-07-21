@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/all.min.css">
+		<link rel="stylesheet" href="/css/custom.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+
+		<title>Hectosky | Megan Kiminki</title>
+		<meta name="description" content="Sky subtraction for regions with strong nebular emission">
+	</head>
+  
+	<body>
+
+		<div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+
+			<header class-="mb-auto">
+				<nav class="navbar navbar-dark navbar-expand-md px-2 px-md-4 py-0">
+					<a class="navbar-brand" href="/index.html">Megan Kiminki</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="fa fa-bars fa-lg"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="collapsingNavbar">
+						<ul class="navbar-nav ms-auto text-center">
+							<li class="nav-item px-md-1">
+								<a class="nav-link" href="/index.html">Home</a>
+							</li>
+							<li class="nav-item px-md-1">
+								<a class="nav-link" href="/science/index.html">Science</a>
+							</li>
+							<li class="nav-item px-md-1">
+								<a class="nav-link" href="/notes/index.html">Resources</a>
+							</li>
+							<li class="nav-item pl-md-1">
+								<a class="nav-link" href="/contact.html">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+
+			<main role="main" class="container-lg flex-grow-1">
+				<section class="row justify-content-center h-100 align-items-md-center mt-4">
+					<div class="col-auto col-md-9 col-xl-8 px-3 px-md-2">
+                        <h1 class="h1-title text-muted">Hectosky: Multi-Fiber Sky Subtraction</h1>
+                        <p>
+                            Hectosky is an an interactive, IDL-based pipeline for sky subtraction
+                            in multi-fiber spectroscopy, designed to remove background nebular emission lines 
+                            while maximizing overall signal-to-noise.
+                        </p>
+                        <p>
+                            The source code is  
+                            <a href="https://github.com/mkiminki/hectosky" target="_blank">
+                                available on GitHub</a>
+                            along with 
+                            <a href="https://github.com/mkiminki/hectosky/blob/master/README.md" target="_blank">
+                                complete instructions</a> 
+                            for installation and use.
+                        </p>
+                        <figure class="figure w-100 text-center mx-auto mt-2 mb-3">
+							<img class="figure-img img-fluid rounded wrapper-image-80 border border-white border-5" src="/images/Hectosky-example.jpg" alt="A graph window with four panels illustrating sample output from the Hectosky sky subtraction program.">
+                            <figcaption class="figure-caption wrapper-image-80 mx-auto">
+                                Sample plots produced by Hectosky for reviewing the quality of sky subtraction.
+                            </figcaption>
+                        </figure>
+                        <p>
+                            Hectosky was specifically written for data taken with the 
+                            <a href="https://www.mmto.org/instrument-suite/hectospec-hectochelle/" target="_blank">
+                                Hectospec multi-fiber spectrograph</a> (hence the name),
+                            and particularly for data 
+                            reduced with Juan Cabanela's 
+                            <a href="https://web.mnstate.edu/cabanela/research/ESPECROAD/" target="_blank">
+                                E-SPECROAD pipeline</a>,
+                             but its algorithm can be adapted for use with data from other instruments.
+                        </p>
+                        <h4 class="h4-title text-muted pb-2 pt-2">Why Optimize Sky Subtraction?</h4>
+                        <p>
+                            One of the final steps in reducing spectroscopic data is subtracting off all the 
+                            light coming from stuff between your telescope and your astronomical target.
+                            Earth's atmosphere makes a big contribution to this "sky" background, both by 
+                            scattering back human-made light pollution and by producing its own 
+                            airglow (such as OH line emission).
+                        </p>
+                        <p>
+                            There may also be light coming from your target's immediate surroundings in space, 
+                            particuarly if your target lies within an emission nebula. 
+                            The low-density ionized gas produces many bright optical lines, 
+                            which can vary in strength across relatively small spatial scales.
+                        </p>
+                        <p>
+                            When you're using a slit spectrograph, you automatically get a spectrum of the sky 
+                            immediately adjacent to your target during the same exposure. With fiber spectrographs, 
+                            you have two choices:
+                            <ol>
+                                <li>
+                                    Point a handful of fibers at blank sky during any given exposure, then combine 
+                                    the results into an average sky spectrum. Good for relatively unifom sky backgrounds.
+                                </li>
+                                <li>
+                                    Add a dedicated sky exposure, offset by 3-5", for each target field. 
+                                    Good for complex sky backgrounds, but doubles your total observing time.
+                                </li>
+                            </ol>
+                        </p>
+                        <p> 
+                            Hectosky gets you the benefits of a dedicated sky exposure 
+                            without the expensive telescope time. It fits a set of common nebular emission lines 
+                            in the closest sky spectrum, while using an average sky spectrum for all other wavelengths.
+                        </p>
+
+                        <p>
+                            For more details, refer to Section 2.3 of 
+                            <a href="https://ui.adsabs.harvard.edu/abs/2015ApJ...813...42K/abstract" target="_blank">Kiminki et al. 2015</a>.
+                            <a href="https://www.astroexplorer.org/details/apj520521f4" target="_blank">Figure 4</a> and 
+                            <a href="https://www.astroexplorer.org/details/apj520521f5" target="_blank">Figure 5</a> illustrate
+                            the increased accuracy and signal-to-noise produced by the Hectosky algorithm.
+                        </p>
+					</div>
+				</section>
+			</main>
+
+			<footer class="footer mt-auto py-3 text-center text-muted">
+				<span class="small">&copy; 2013-2026 Megan Kiminki</span>
+			</footer>
+
+		</div>
+
+		<script src="/js/jquery.slim.min.js"></script>
+		<script src="/js/bootstrap.bundle.min.js"></script>    
+
+	</body>       
+      
+</html>

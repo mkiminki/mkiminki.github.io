@@ -6,13 +6,13 @@
 }
 html {
     position: relative;
-    height: 100vh;
+    height: 100dvh;
 }
 body {
     background-color: var(--light);
     color: var(--darkest);
     font-family: 'Raleway', sans-serif;
-    height: 100vh;
+    height: 100dvh;
 }
 a {
     color: var(--darkest);
